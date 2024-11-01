@@ -1,0 +1,23 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "jsx": "react-jsx",
+    "jsxImportSource": "react",
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "plugins": [
+      {
+        "name": "@astrojs/ts-plugin"
+      }
+    ]
+  },
+  "extends": "astro/tsconfigs/strict",
+  "include": [
+    "astro.config.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    "**/*.astro",
+    "./src/types/*.d.ts"
+  ],
+  "exclude": ["node_modules", "dist"]
+}

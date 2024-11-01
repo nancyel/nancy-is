@@ -1,0 +1,97 @@
+---
+import "../styles/globals.css";
+import "../styles/reset.css";
+import "../styles/theme.css";
+
+import { join } from "node:path";
+
+import { ViewTransitions } from "astro:transitions";
+import { AstroFont } from "astro-font";
+
+export interface Props {
+  title: string;
+  description: string;
+}
+
+const { title, description  } = Astro.props;
+
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+const pageTitle = Astro.url.pathname === "/" ? title : `${title} · Capture the Moment`;
+---
+
+<!doctype html>
+<html lang="en" transition:animate="none">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="generator" content={Astro.generator} />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <AstroFont
+      config={[
+        {
+          name: "HEX Franklin",
+          src: [
+            {
+              style: "normal",
+              path: join(
+                process.cwd(),
+                "public",
+                "fonts",
+                "HEX_Franklin_v0.3_Variable.woff2"
+              ),
+            },
+          ],
+          display: "swap",
+          selector: "body",
+          fallback: "sans-serif",
+          cssVariable: "font-sans",
+        },
+        {
+          name: "MonoLisa",
+          src: [
+            {
+              style: "normal",
+              path: join(
+                process.cwd(),
+                "public",
+                "fonts",
+                "MonoLisaVariableNormal.woff2"
+              ),
+            },
+          ],
+          display: "swap",
+          selector: "code",
+          fallback: "monospace",
+          cssVariable: "font-mono",
+        },
+      ]}
+    />
+    <link rel="stylesheet" href="/src/styles/globals.css">
+    <link rel="icon" href="/favicon.svg?v=4" type="image/svg+xml" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="canonical" href={canonicalURL} />
+    <meta name="description" content={description} />
+    <meta property="og:title" content={title} />
+    <meta property="og:type" content="website" />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonicalURL} />
+    <meta property="og:locale" content="ko_KR" />
+    <meta property="og:site_name" content="Capture The Moment" />
+    <meta
+      property="og:image"
+      content={`${Astro.url.origin}/og/default.webp`}
+    />
+    <meta
+      property="og:image:alt"
+      content={"Capture The Moment"}
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="manifest" href="/manifest.json" />
+    <title>{pageTitle}</title>
+    <ViewTransitions />
+  </head>
+  <body>
+    <slot />
+  </body>
+</html>

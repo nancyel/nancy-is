@@ -1,0 +1,56 @@
+---
+import Center from "./Center.astro";
+import { RelativeDate } from "./RelativeDate";
+
+interface Props {
+  title: string;
+  description?: string;
+  datePublished?: Date;
+}
+
+const { title, description, datePublished} =
+  Astro.props;
+
+---
+
+<header class="page-header">
+  <Center>
+    <h1 itemprop="name" class="page-title">
+      {title}
+    </h1>
+    {description && <p class="page-subtitle">{description}</p>}
+    {
+      datePublished && (
+        <div class="date">
+           <RelativeDate date={datePublished} client:load />
+        </div>
+      )
+    }
+  </Center>
+</header>
+
+<style>
+  .page-header {
+    padding-block-end: var(--space-3xl);
+  }
+
+  .page-title {
+    padding-block-start: var(--space-2xl);
+    line-height: var(--line-height-display);
+  }
+
+  .page-subtitle {
+    font-size: var(--step-2);
+    line-height: var(--line-height-tight);
+    padding-block-start: var(--space-xs);
+  }
+
+  .date {
+    display: flex;
+    align-items: baseline;
+    column-gap: var(--space-2xs);
+    margin-block-start: var(--space-m);
+    font-size: var(--step--1);
+  }
+
+</style>

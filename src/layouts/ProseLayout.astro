@@ -1,0 +1,38 @@
+---
+import "../styles/prose.css";
+
+import PageHeader from "../components/PageHeader.astro";
+import { smartquotes } from "../utils";
+import BaseLayout from "./BaseLayout.astro";
+
+interface Props {
+  title: string;
+  description: string;
+  datePublished?: Date;
+}
+
+const {
+  title,
+  description,
+  datePublished,
+} = Astro.props;
+---
+
+<BaseLayout
+  title={title}
+  description={smartquotes(description)}
+  padBottom
+>
+  <article itemscope itemtype="https://schema.org/BlogPosting">
+    <PageHeader
+      title={title}
+      description={smartquotes(description)}
+      datePublished={datePublished}
+
+    />
+    <section itemprop="articleBody" class="prose">
+      <slot />
+    </section>
+    <slot name="after-prose" />
+  </article>
+</BaseLayout>

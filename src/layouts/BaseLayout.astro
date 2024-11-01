@@ -1,0 +1,37 @@
+---
+import "../styles/base.css";
+
+import UnstyledBase from "./UnstyledBase.astro";
+
+interface Props {
+  title: string;
+  description: string;
+  padTop?: boolean;
+  padBottom?: boolean;
+}
+
+const { title, description, padTop, padBottom } =
+  Astro.props;
+
+---
+
+<UnstyledBase
+  title={title}
+  description={description}
+>
+  <main
+    class:list={["main", { padTop }, { padBottom }]}
+  >
+    <slot />
+  </main>
+</UnstyledBase>
+
+<style>
+  .main {
+    flex: 1;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+</style>
