@@ -1,4 +1,15 @@
-# Astro Starter Kit: Basics
+# Astro Now
+
+Create and manage your personal /now page with [this open-source Astro website](https://github.com/evadecker/eva.town/blob/main/src/pages/now.astro). This repo features a custom /capture endpoint that lets you document new moments directly through the UI. Each submission automatically creates a new file in your GitHub repository under src/content/now/.
+
+## Getting Started
+
+- Clone the repository
+- Deploy to Vercel or your preferred hosting platform
+- Connect your GitHub repository
+- Set up your GitHub credentials (personal access token) in .env and configure hosting environment variables
+
+## Astro Starter Kit: Basics
 
 ```sh
 npm create astro@latest -- --template basics

@@ -17,6 +17,9 @@ importers:
       '@astrojs/vercel':
         specifier: ^7.8.2
         version: 7.8.2(astro@4.16.8(@types/node@22.8.6)(rollup@4.24.3)(sass@1.80.5)(typescript@5.6.3))(react@18.3.1)
+      '@octokit/core':
+        specifier: ^6.1.2
+        version: 6.1.2
       '@types/react':
         specifier: ^18.3.12
         version: 18.3.12
@@ -506,6 +509,36 @@ packages:
     resolution: {integrity: sha512-oGB+UxlgWcgQkgwo8GcEGwemoTFt3FIO9ababBmaGwXIoBKZ+GTy0pP185beGg7Llih/NSHSV2XAs1lnznocSg==}
     engines: {node: '>= 8'}
 
+  '@octokit/auth-token@5.1.1':
+    resolution: {integrity: sha512-rh3G3wDO8J9wSjfI436JUKzHIxq8NaiL0tVeB2aXmG6p/9859aUOAjA9pmSPNGGZxfwmaJ9ozOJImuNVJdpvbA==}
+    engines: {node: '>= 18'}
+
+  '@octokit/core@6.1.2':
+    resolution: {integrity: sha512-hEb7Ma4cGJGEUNOAVmyfdB/3WirWMg5hDuNFVejGEDFqupeOysLc2sG6HJxY2etBp5YQu5Wtxwi020jS9xlUwg==}
+    engines: {node: '>= 18'}
+
+  '@octokit/endpoint@10.1.2':
+    resolution: {integrity: sha512-XybpFv9Ms4hX5OCHMZqyODYqGTZ3H6K6Vva+M9LR7ib/xr1y1ZnlChYv9H680y77Vd/i/k+thXApeRASBQkzhA==}
+    engines: {node: '>= 18'}
+
+  '@octokit/graphql@8.1.2':
+    resolution: {integrity: sha512-bdlj/CJVjpaz06NBpfHhp4kGJaRZfz7AzC+6EwUImRtrwIw8dIgJ63Xg0OzV9pRn3rIzrt5c2sa++BL0JJ8GLw==}
+    engines: {node: '>= 18'}
+
+  '@octokit/openapi-types@22.2.0':
+    resolution: {integrity: sha512-QBhVjcUa9W7Wwhm6DBFu6ZZ+1/t/oYxqc2tp81Pi41YNuJinbFRx8B133qVOrAaBbF7D/m0Et6f9/pZt9Rc+tg==}
+
+  '@octokit/request-error@6.1.6':
+    resolution: {integrity: sha512-pqnVKYo/at0NuOjinrgcQYpEbv4snvP3bKMRqHaD9kIsk9u1LCpb2smHZi8/qJfgeNqLo5hNW4Z7FezNdEo0xg==}
+    engines: {node: '>= 18'}
+
+  '@octokit/request@9.1.4':
+    resolution: {integrity: sha512-tMbOwGm6wDII6vygP3wUVqFTw3Aoo0FnVQyhihh8vVq12uO3P+vQZeo2CKMpWtPSogpACD0yyZAlVlQnjW71DA==}
+    engines: {node: '>= 18'}
+
+  '@octokit/types@13.6.2':
+    resolution: {integrity: sha512-WpbZfZUcZU77DrSW4wbsSgTPfKcp286q3ItaIgvSbBpZJlu6mnYXAkjZz6LVZPXkEvLIM8McanyZejKTYUHipA==}
+
   '@oslojs/encoding@1.1.0':
     resolution: {integrity: sha512-70wQhgYmndg4GCPxPPxPGevRKqTIJ2Nh4OkiMWmDAVYsTQ+Ta7Sq+rPevXyXGdzr30/qZBnyOalCszoMxlyldQ==}
 
@@ -892,6 +925,9 @@ packages:
   base-64@1.0.0:
     resolution: {integrity: sha512-kwDPIFCGx0NZHog36dj+tHiwP4QMzsZ3AgMViUBKI0+V5n4U0ufTCUMhnQ04diaRI8EX/QcPfql7zlhZ7j4zgg==}
 
+  before-after-hook@3.0.2:
+    resolution: {integrity: sha512-Nik3Sc0ncrMK4UUdXQmAnRtzmNQTAAXmXIopizwZ1W1t8QmfJj+zL4OA2I7XPTPW5z5TDqv4hRo/JzouDJnX3A==}
+
   bindings@1.5.0:
     resolution: {integrity: sha512-p2q/t/mhvuOj/UeLlV6566GD/guowlr0hHxClI0W9m7MWYkL1F0hLo+0Aexs9HSPCtR1SXQ0TD3MMKrXZajbiQ==}
 
@@ -1115,6 +1151,9 @@ packages:
 
   extend@3.0.2:
     resolution: {integrity: sha512-fjquC59cD7CyW6urNXK0FBufkZcoiGG80wTuPujX590cB5Ttln20E2UB4S/WARVqhXffZl2LNgS+gQdPIIim/g==}
+
+  fast-content-type-parse@2.0.0:
+    resolution: {integrity: sha512-fCqg/6Sps8tqk8p+kqyKqYfOF0VjPNYrqpLiqNl0RBKmD80B080AJWVV6EkSkscjToNExcXg1+Mfzftrx6+iSA==}
 
   fast-deep-equal@3.1.3:
     resolution: {integrity: sha512-f3qQ9oQy9j2AhBe/H9VC91wLmKBCCU/gDOnKNAYG5hswO7BLKj09Hc5HYNz9cGI++xlpDCIgDaitVs03ATR84Q==}
@@ -1985,6 +2024,9 @@ packages:
   unist-util-visit@5.0.0:
     resolution: {integrity: sha512-MR04uvD+07cwl/yhVuVWAtw+3GOR/knlL55Nd/wAdblk27GCVt3lqpTivy/tkJcZoNPzTwS1Y+KMojlLDhoTzg==}
 
+  universal-user-agent@7.0.2:
+    resolution: {integrity: sha512-0JCqzSKnStlRRQfCdowvqy3cy0Dvtlb8xecj/H8JFZuCze4rwjPZQOgvFvn0Ws/usCHQFGpyr+pB9adaGwXn4Q==}
+
   update-browserslist-db@1.1.1:
     resolution: {integrity: sha512-R8UzCaa9Az+38REPiJ1tXlImTJXlVfgHZsglwBD/k6nj76ctsH1E3q4doGrukiLQd3sGQYu56r5+lo5r94l29A==}
     hasBin: true
@@ -2706,6 +2748,47 @@ snapshots:
       '@nodelib/fs.scandir': 2.1.5
       fastq: 1.17.1
 
+  '@octokit/auth-token@5.1.1': {}
+
+  '@octokit/core@6.1.2':
+    dependencies:
+      '@octokit/auth-token': 5.1.1
+      '@octokit/graphql': 8.1.2
+      '@octokit/request': 9.1.4
+      '@octokit/request-error': 6.1.6
+      '@octokit/types': 13.6.2
+      before-after-hook: 3.0.2
+      universal-user-agent: 7.0.2
+
+  '@octokit/endpoint@10.1.2':
+    dependencies:
+      '@octokit/types': 13.6.2
+      universal-user-agent: 7.0.2
+
+  '@octokit/graphql@8.1.2':
+    dependencies:
+      '@octokit/request': 9.1.4
+      '@octokit/types': 13.6.2
+      universal-user-agent: 7.0.2
+
+  '@octokit/openapi-types@22.2.0': {}
+
+  '@octokit/request-error@6.1.6':
+    dependencies:
+      '@octokit/types': 13.6.2
+
+  '@octokit/request@9.1.4':
+    dependencies:
+      '@octokit/endpoint': 10.1.2
+      '@octokit/request-error': 6.1.6
+      '@octokit/types': 13.6.2
+      fast-content-type-parse: 2.0.0
+      universal-user-agent: 7.0.2
+
+  '@octokit/types@13.6.2':
+    dependencies:
+      '@octokit/openapi-types': 22.2.0
+
   '@oslojs/encoding@1.1.0': {}
 
   '@parcel/watcher-android-arm64@2.4.1':
@@ -3152,6 +3235,8 @@ snapshots:
 
   base-64@1.0.0: {}
 
+  before-after-hook@3.0.2: {}
+
   bindings@1.5.0:
     dependencies:
       file-uri-to-path: 1.0.0
@@ -3351,6 +3436,8 @@ snapshots:
       is-extendable: 0.1.1
 
   extend@3.0.2: {}
+
+  fast-content-type-parse@2.0.0: {}
 
   fast-deep-equal@3.1.3: {}
 
@@ -4503,6 +4590,8 @@ snapshots:
       '@types/unist': 3.0.3
       unist-util-is: 6.0.0
       unist-util-visit-parents: 6.0.1
+
+  universal-user-agent@7.0.2: {}
 
   update-browserslist-db@1.1.1(browserslist@4.24.2):
     dependencies:
